@@ -4,6 +4,7 @@
   padding:0px;
   font-family: "Futura";
   box-sizing: border-box;
+  /*border-style: dashed;*/
 }
 
 
@@ -12,9 +13,8 @@
 p {
   padding: 5px;
   display: block;
-  width: 50%;
-  margin: auto;
-  font-size: 24px;
+  width: auto;
+  margin: 0px 50px;
   text-align: center
 }
 
@@ -28,11 +28,21 @@ h1{
 h2{
   padding: 10px;
   font-size: 36px;
-
+  text-align: center;
 }
 
-.body{
+.indexbody{
   display: flex;
+  box-sizing: border-box;
+  position: relative;
+  align-items: center;
+  margin: 0px 200px;
+  /*padding: 0px 100px;*/
+  
+}
+
+.projectbody{
+  /*display: flex;*/
   box-sizing: border-box;
   position: relative;
   align-items: center;
@@ -43,14 +53,19 @@ h2{
 img{
   display: inline-flex;
   justify-content: center;
+  
 }
+
 
 .mainpic{
   
   min-width: 90px;
-  max-width: 900px;
   min-height: 120px;
-  max-height: 1200px;
+  max-height: 25%;
+  max-width: 25%;
+  /*height: auto;*/
+  overflow: hidden;
+  border-radius: 50px;
 
 }
 
@@ -131,7 +146,7 @@ td, th, tr, thead, tbody{
 
 
 .center-dropdown {
-  padding: 15px;
+  padding: 10px;
   width: 50%;
   margin: auto;
   text-align: center;
