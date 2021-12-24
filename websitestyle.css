@@ -3,8 +3,9 @@
   margin:0px;
   padding:0px;
   font-family: "Futura";
+  display: flexbox;
   box-sizing: border-box;
-  /*border-style: dashed;*/
+  border-style: dashed;
 }
 
 
@@ -14,7 +15,7 @@ p {
   padding: 5px;
   display: block;
   width: auto;
-  margin: 0px 50px;
+  /*margin: 0px 50px;*/
   text-align: center
 }
 
@@ -42,7 +43,6 @@ h2{
 }
 
 .projectbody{
-  /*display: flex;*/
   box-sizing: border-box;
   position: relative;
   align-items: center;
@@ -50,14 +50,8 @@ h2{
   padding: 0px 100px;
 }
 
-img{
-  display: inline-flex;
-  justify-content: center;
-  
-}
 
-
-.mainpic{
+img.mainpic{
   
   min-width: 90px;
   min-height: 120px;
@@ -90,7 +84,7 @@ a:hover{
   opacity: 0.5;
 }
 
-.links {
+header.links {
   box-sizing: border-box;
   background-color: #3587A4;
   overflow: auto;
@@ -101,11 +95,14 @@ a:hover{
   
 }
 
-.links img{
+img.links{
+  display: inline-flex;
+  justify-content: center;
   background-color: #3587A4;
   height: 28px;
   width: 34px;
   vertical-align: bottom;
+
 }
 
 #youtube{
@@ -130,20 +127,30 @@ a:hover{
 }
 
 table{
+  display: inline-block;
   border-collapse: collapse;
   margin: auto;
   text-align: center;
-  padding: 10px;
+  table-layout: fixed;
+  max-width: 100%;
 }
  
 
 td, th, tr, thead, tbody{
   border-collapse: collapse;
-  text-align: center;
   padding: 10px;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 
-
+table img {
+  max-width: 75%;
+  max-height: 75%;
+  height: auto;
+  width: auto;
+}
 
 .center-dropdown {
   padding: 10px;
@@ -155,12 +162,11 @@ td, th, tr, thead, tbody{
 
 .center {
   text-align: center;
-  width: 50%;
   margin: auto;
 }
 
 
-
 .hidden {
     display: none;
+    overflow: auto;
 }
