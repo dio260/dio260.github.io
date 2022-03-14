@@ -2,34 +2,73 @@
   background: rgb(175, 218, 253);
   margin:0px;
   padding:0px;
+  font-size: 20px;
   font-family: "Futura";
   display: flexbox;
+  
+  /*
+  border-style: dashed;
   box-sizing: border-box;
-  /*border-style: dashed;*/
+  border: 2px gray solid;
+  */
+  
+  border-radius: inherit;
 }
-
-
 
 /* Text and Image Elements */
 p {
   padding: 5px;
   display: block;
-  width: auto;
+  /*width: 50%;*/
   /*margin: 0px 50px;*/
-  text-align: center
+  text-align: center;
+  background-color: inherit;
 }
 
 h1{
-  padding: 10px;
+  padding: 0.5em;
   text-align: center;
-  font-size: 48px;
-
+  font-size: 2.5em;
+  background-color: inherit;
 }
 
 h2{
-  padding: 10px;
-  font-size: 36px;
+  padding: 0.5em;
+  font-size: 1.75em;
   text-align: center;
+  background-color: inherit;
+}
+
+h3{
+  padding: 0.5em;
+  font-size: 1.25em;
+  text-align: center;
+  background-color: inherit;
+}
+
+img {
+  max-width: 75%;
+  max-height: 75%;
+  /*
+  height: auto;
+  width: auto;
+  */
+}
+/*
+img.big{
+  max-width: 15%;
+  max-height: 15%;
+  height: auto;
+  width: auto;
+}
+*/
+.top-element {
+  /*padding: 100px 0px;*/
+  padding-top: 50px;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  grid-column: span 3;
 }
 
 .indexbody{
@@ -37,19 +76,78 @@ h2{
   box-sizing: border-box;
   position: relative;
   align-items: center;
-  margin: 0px 200px;
+  margin: 0px 10em;
   /*padding: 0px 100px;*/
   
 }
 
 .projectbody{
-  box-sizing: border-box;
+  /*box-sizing: border-box;
   position: relative;
   align-items: center;
-  top: 50px;
   padding: 0px 100px;
+  margin-top: 50px;
+  */
+  
+  display: grid;
+  border: 2px black solid;
+  grid-template: repeat(2, 1fr) / 1fr;
+  grid-auto-rows: 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-flow:  dense;
 }
 
+.project{
+  border-radius: 1em;
+  display: inline-flex;
+
+  flex-wrap: nowrap;
+  /*
+    white-space: nowrap;
+  justify-items: center;
+  align-items: center;
+  flex-flow: column wrap;
+    flex-wrap:  nowrap;
+  display: grid;
+  grid-template-columns: 100% 0%;
+  transition: width 1s linear;
+  */
+  height: 300px;
+}
+
+.projectsidebar{
+  /*
+  width: 20%;
+  
+  */
+  display: inline-flexbox;
+  text-align: center;
+  background-color: inherit;
+  transition: width 1s linear 50ms;
+  height: inherit;
+  overflow: hidden;
+  width: 100%;
+}
+
+.projectsummary{
+  /*
+  max-width: 50%;
+  */
+  display: inline-flexbox;
+  text-align: center;
+  background-color: inherit;
+  transition: width 1s linear 50ms;
+  height: inherit;
+  overflow: hidden;
+  width: 0%;
+}
+.project:hover .projectsidebar{
+  width: 20%;
+  overflow: hidden scroll;
+}
+.project:hover .projectsummary{
+  width: 80%;
+}
 
 img.mainpic{
   
@@ -66,9 +164,7 @@ img.mainpic{
 /* Header Link Elements */
 
 a {
-  
   display: inline-flex;
-  font-size: 20px;
   font-weight: 500;
   letter-spacing: 2px;
   margin: auto;
@@ -91,8 +187,7 @@ header.links {
   position: fixed;
   width: 100%;
   text-align: center;
-  padding: 6px 0px;
-  
+  padding: 0.25em 0em;
 }
 
 img.links{
@@ -102,7 +197,6 @@ img.links{
   height: 28px;
   width: 34px;
   vertical-align: bottom;
-
 }
 
 #youtube{
@@ -116,7 +210,6 @@ img.links{
   background-color: #3587A4;
   height: 28px;
   width: 25px;
-
 }
 
 #itch{
@@ -125,7 +218,7 @@ img.links{
   width: 30px;
 
 }
-
+/*
 table{
   display: inline-block;
   border-collapse: collapse;
@@ -145,28 +238,13 @@ td, th, tr, thead, tbody{
   height: auto;
 }
 
-table img {
-  max-width: 75%;
-  max-height: 75%;
-  height: auto;
-  width: auto;
-}
-
-.center-dropdown {
-  padding: 10px;
-  width: 50%;
-  margin: auto;
-  text-align: center;
-
-}
-
 .center {
   text-align: center;
   margin: auto;
 }
 
-
 .hidden {
     display: none;
     overflow: auto;
 }
+*/
